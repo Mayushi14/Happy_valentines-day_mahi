@@ -11,21 +11,22 @@ html {
 }
 
 body {
-    min-height: 100vh;
-    height: 100%;
+    min-height: 100dvh;
+    height: 100dvh;
 
     background: 
         linear-gradient(45deg, 
             #620080 25%, 
             #8a2be2 75%);
     font-family: 'Courier New', monospace;
-    overflow: hidden;
     position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
     /* Hardware acceleration */
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     transform: translateZ(0);
-    overscroll-behavior: none;
+    
 }
 
 body::before {
@@ -49,8 +50,8 @@ body::before {
 }
 
 @keyframes float {
-    0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+    0% { transform: translateY(100dvh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100dvh) rotate(360deg); opacity: 0; }
 }
 
 .message-container {
@@ -173,3 +174,4 @@ body::before {
     100% { transform: scale(5); opacity: 0; }
 
 }
+
